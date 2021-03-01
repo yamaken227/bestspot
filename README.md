@@ -19,7 +19,7 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| prefecture_id | string     | null: false                    |
+| prefecture_id | integer     | null: false                    |
 | place_name    | string     | null: false                    |
 | place_detail  | text       | null: false                    |
 | user          | references | null: false, foreign_key: true |

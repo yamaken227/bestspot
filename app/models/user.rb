@@ -5,10 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          with_options presence: true do
-          validates :last_name, format: { with: /\A[^ -~｡-ﾟ]+\z/, message: 'Full-width characters' }
-          validates :first_name, format: { with: /\A[^ -~｡-ﾟ]+\z/, message: 'Full-width characters' }
+          validates :last_name, format: { with: /\A[^ -~｡-ﾟ]+\z/, message: 'は全角で入力してください' }
+          validates :first_name, format: { with: /\A[^ -~｡-ﾟ]+\z/, message: 'は全角で入力してください' }
           validates :nickname
         end
         PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-        validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
+        validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください'
 end

@@ -11,7 +11,14 @@
 
   <body>
     <%= yield %>
+    <%= javascript_pack_tag 'costom_vue' %>
     <%= javascript_pack_tag 'hello_vue' %>
-    <%= stylesheet_pack_tag 'hello_vue'  %> 
+    <%= stylesheet_pack_tag 'hello_vue' %>
+    <div id="hello">
+      <p>{{ message }}</p>
+    </div>
+    <div id="hello2">
+      <p>{{ message }}</p>
+    </div>
   </body>
 </html>
